@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['https://devsearch-f5a7.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['devsearch-f5a7.onrender.com', 'localhost', '127.0.0.1']
 
 database_url = os.environ.get("DATABASE_URL")
 

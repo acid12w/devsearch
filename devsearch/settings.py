@@ -21,17 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY") 
-# 'django-insecure-r^*ff2bj1!7w^jt+jm(i!h%)7)y6eu87e$3d@w6m7^fykr_6(&'
+# SECRET_KEY = os.environ.get("SECRET_KEY") 
+SECRET_KEY = 'django-insecure-r^*ff2bj1!7w^jt+jm(i!h%)7)y6eu87e$3d@w6m7^fykr_6(&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", 'False').lower() == 'true'
-# DEBUG = True
+# DEBUG = os.environ.get("DEBUG", 'False').lower() == 'true'
+DEBUG = True
 
 ALLOWED_HOSTS = ['devsearch-f5a7.onrender.com', 'localhost', '127.0.0.1']
 
-database_url = os.environ.get("DATABASE_URL") 
-# or 'database-1.c3i26i8o284d.us-east-1.rds.amazonaws.com'
+database_url = os.environ.get("DATABASE_URL") or 'database-1.c3i26i8o284d.us-east-1.rds.amazonaws.com'
 
 
 # Application definition

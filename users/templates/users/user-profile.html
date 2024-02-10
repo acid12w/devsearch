@@ -74,7 +74,7 @@
             <div class="grid grid--two">
                 {% for project in profile.project_set.all %}
               <div class="column">
-                <div class="card project">
+                <div class="card project w-full">
                   <a href="{% url 'project' project.id %}" class="project">
                     <img class="project__thumbnail" src="{{project.featured_image.url}}" alt="project thumbnail" />
                     <div class="card__body">

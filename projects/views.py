@@ -41,10 +41,9 @@ def createProject(request):
 
     if request.method == 'POST':
         form = ProjectForm(request.POST, request.FILES)
-        print(form)
+      
         if form.is_valid():
             project = form.save(commit=False)
-            print('Project:',form)  
             project.owner = profile  
             project.save()
             return redirect("account") 
